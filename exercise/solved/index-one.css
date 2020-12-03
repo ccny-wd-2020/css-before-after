@@ -1,0 +1,90 @@
+html {
+  --aqur-color: #C7F8F9;
+  --aqur-bg: #6AB1C9;
+  --cool-green: #29d66a;
+  --offwhite: #f8f8ff;
+  --darkblue: rgb(50,50,60);
+  --grass-bg: #78C98D;
+  --grass-color: #D0F9C7;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  margin: 0 auto 30px auto;
+  /* display: block; */
+}
+
+.btn-bg {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-2 {
+  background: var(--grass-bg);
+}
+.btn-2 > button {
+  color: var(--grass-bg);
+  background: var(--grass-color);
+  border: none;
+}
+
+.btn-2 > button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 0px;
+  height: 3px;
+  background: var(--grass-color);
+  transition: all .4s ease;
+}
+.btn-2 > button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 0px;
+  height: 3px;
+  background: var(--grass-color);
+  transition: all .4s ease;
+}
+.btn-2 > button::after {
+  top: inherit;
+  left: inherit;
+  bottom: 0;
+  right: 0;
+}
+.btn-2 > button:hover::before {
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+  width: 100%;
+}
+.btn-2 > button:hover::after {
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+  width: 100%;
+}
+.btn-2 > button:hover {
+  color: var(--grass-color);
+  background: transparent;
+}
+button {
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  position: relative;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 1rem 3rem 1rem 3rem;
+  text-transform: uppercase;
+  font-family: "Lato";
+  font-size: 1.5em;
+}
